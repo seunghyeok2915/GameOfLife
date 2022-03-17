@@ -42,8 +42,15 @@ void InitScreen()
 	{
 		for (int x = 0; x < 32; x++)
 		{
-			gotoXY(x, y);
-			_putch(Stage[y][x]);
+			gotoXY(x * 2, y);
+			if (Stage[y][x] == '+')
+			{
+				cout << "□";
+			}
+			else if (Stage[y][x] == '@')
+			{
+				cout << "■";
+			}
 		}
 	}
 
